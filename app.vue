@@ -69,19 +69,22 @@
         </div>
 
         <!-- Device List and Health Tracking Chart -->
-        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div class="">
-            <DeviceList />
-          </div>
-          <div class="">
-            <DashboardCard title="Health Tracking">
-              <!-- Chart placeholder - In a real app, implement with Chart.js -->
-              <div class="h-64 bg-gray-100 rounded flex items-center justify-center">
-                Health Tracking Chart
-              </div>
-            </DashboardCard>
-          </div>
-        </div>
+				<div class="mt-8 flex flex-col lg:flex-row gap-6">
+					<!-- Device List -->
+					<div class="lg:w-1/3">
+						<DeviceList />
+					</div>
+					
+					<!-- Health Tracking Chart -->
+					<div class="lg:w-2/3">
+						<DashboardCard title="Health Tracking">
+							<!-- Chart placeholder - In a real app, implement with Chart.js -->
+							<div class="h-64 bg-gray-100 rounded flex items-center justify-center">
+								Health Tracking Chart
+							</div>
+						</DashboardCard>
+					</div>
+				</div>
 
         <!-- Sleep Monitoring -->
         <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
