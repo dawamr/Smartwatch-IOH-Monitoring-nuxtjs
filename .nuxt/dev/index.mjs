@@ -1,32 +1,31 @@
-import process from 'node:process';globalThis._importMeta_={url:import.meta.url,env:process.env};import { getRequestHeader, splitCookiesString, setResponseStatus, setResponseHeader, send, getRequestHeaders, defineEventHandler, handleCacheHeaders, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, getResponseStatus, setResponseHeaders, createError, getRouterParam, readBody, getQuery as getQuery$1, getResponseStatusText } from 'file:///home/project/node_modules/h3/dist/index.mjs';
+import process from 'node:process';globalThis._importMeta_={url:import.meta.url,env:process.env};import { mkdirSync } from 'node:fs';
 import { Server } from 'node:http';
-import { mkdirSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { parentPort, threadId } from 'node:worker_threads';
-import { getRequestDependencies, getPreloadLinks, getPrefetchLinks, createRenderer } from 'file:///home/project/node_modules/vue-bundle-renderer/dist/runtime.mjs';
-import { stringify, uneval } from 'file:///home/project/node_modules/devalue/index.js';
-import destr from 'file:///home/project/node_modules/destr/dist/index.mjs';
-import { withQuery, joinURL, withTrailingSlash, parseURL, withoutBase, getQuery, joinRelativeURL } from 'file:///home/project/node_modules/ufo/dist/index.mjs';
-import { renderToString } from 'file:///home/project/node_modules/vue/server-renderer/index.mjs';
-import { propsToString, renderSSRHead } from 'file:///home/project/node_modules/@unhead/ssr/dist/index.mjs';
-import { createHooks } from 'file:///home/project/node_modules/hookable/dist/index.mjs';
-import { createFetch as createFetch$1, Headers as Headers$1 } from 'file:///home/project/node_modules/ofetch/dist/node.mjs';
-import { createCall, createFetch } from 'file:///home/project/node_modules/unenv/runtime/fetch/index.mjs';
-import { klona } from 'file:///home/project/node_modules/klona/dist/index.mjs';
-import defu, { defuFn } from 'file:///home/project/node_modules/defu/dist/defu.mjs';
-import { snakeCase } from 'file:///home/project/node_modules/scule/dist/index.mjs';
-import { createStorage, prefixStorage } from 'file:///home/project/node_modules/unstorage/dist/index.mjs';
-import unstorage_47drivers_47fs from 'file:///home/project/node_modules/unstorage/drivers/fs.mjs';
-import { toRouteMatcher, createRouter } from 'file:///home/project/node_modules/radix3/dist/index.mjs';
-import { getContext } from 'file:///home/project/node_modules/unctx/dist/index.mjs';
+import { getRequestHeader, splitCookiesString, setResponseStatus, setResponseHeader, send, getRequestHeaders, defineEventHandler, handleCacheHeaders, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, getResponseStatus, setResponseHeaders, createError, getRouterParam, readBody, getQuery as getQuery$1, getResponseStatusText } from 'file://D:/vue/Smartwatch-IOH-Monitoring-nuxtjs/node_modules/h3/dist/index.mjs';
+import { getRequestDependencies, getPreloadLinks, getPrefetchLinks, createRenderer } from 'file://D:/vue/Smartwatch-IOH-Monitoring-nuxtjs/node_modules/vue-bundle-renderer/dist/runtime.mjs';
+import { stringify, uneval } from 'file://D:/vue/Smartwatch-IOH-Monitoring-nuxtjs/node_modules/devalue/index.js';
+import destr from 'file://D:/vue/Smartwatch-IOH-Monitoring-nuxtjs/node_modules/destr/dist/index.mjs';
+import { withQuery, joinURL, withTrailingSlash, parseURL, withoutBase, getQuery, joinRelativeURL } from 'file://D:/vue/Smartwatch-IOH-Monitoring-nuxtjs/node_modules/ufo/dist/index.mjs';
+import { propsToString, renderSSRHead } from 'file://D:/vue/Smartwatch-IOH-Monitoring-nuxtjs/node_modules/@unhead/ssr/dist/index.mjs';
+import { createServerHead as createServerHead$1, CapoPlugin } from 'file://D:/vue/Smartwatch-IOH-Monitoring-nuxtjs/node_modules/unhead/dist/index.mjs';
+import { klona } from 'file://D:/vue/Smartwatch-IOH-Monitoring-nuxtjs/node_modules/klona/dist/index.mjs';
+import defu, { defuFn } from 'file://D:/vue/Smartwatch-IOH-Monitoring-nuxtjs/node_modules/defu/dist/defu.mjs';
+import { snakeCase } from 'file://D:/vue/Smartwatch-IOH-Monitoring-nuxtjs/node_modules/scule/dist/index.mjs';
+import { createHooks } from 'file://D:/vue/Smartwatch-IOH-Monitoring-nuxtjs/node_modules/hookable/dist/index.mjs';
+import { createFetch as createFetch$1, Headers as Headers$1 } from 'file://D:/vue/Smartwatch-IOH-Monitoring-nuxtjs/node_modules/ofetch/dist/node.mjs';
+import { createCall, createFetch } from 'file://D:/vue/Smartwatch-IOH-Monitoring-nuxtjs/node_modules/unenv/runtime/fetch/index.mjs';
 import { AsyncLocalStorage } from 'node:async_hooks';
-import { consola } from 'file:///home/project/node_modules/consola/dist/index.mjs';
-import { captureRawStackTrace, parseRawStackTrace } from 'file:///home/project/node_modules/errx/dist/index.js';
-import { isVNode, unref, version } from 'file:///home/project/node_modules/vue/index.mjs';
-import { hash } from 'file:///home/project/node_modules/ohash/dist/index.mjs';
-import { createServerHead as createServerHead$1, CapoPlugin } from 'file:///home/project/node_modules/unhead/dist/index.mjs';
-import { defineHeadPlugin } from 'file:///home/project/node_modules/@unhead/shared/dist/index.mjs';
+import { consola } from 'file://D:/vue/Smartwatch-IOH-Monitoring-nuxtjs/node_modules/consola/dist/index.mjs';
+import { getContext } from 'file://D:/vue/Smartwatch-IOH-Monitoring-nuxtjs/node_modules/unctx/dist/index.mjs';
+import { captureRawStackTrace, parseRawStackTrace } from 'file://D:/vue/Smartwatch-IOH-Monitoring-nuxtjs/node_modules/errx/dist/index.js';
+import { isVNode, unref, version } from 'file://D:/vue/Smartwatch-IOH-Monitoring-nuxtjs/node_modules/vue/index.mjs';
+import { hash } from 'file://D:/vue/Smartwatch-IOH-Monitoring-nuxtjs/node_modules/ohash/dist/index.mjs';
+import { createStorage, prefixStorage } from 'file://D:/vue/Smartwatch-IOH-Monitoring-nuxtjs/node_modules/unstorage/dist/index.mjs';
+import unstorage_47drivers_47fs from 'file://D:/vue/Smartwatch-IOH-Monitoring-nuxtjs/node_modules/unstorage/drivers/fs.mjs';
+import { toRouteMatcher, createRouter } from 'file://D:/vue/Smartwatch-IOH-Monitoring-nuxtjs/node_modules/radix3/dist/index.mjs';
+import { defineHeadPlugin } from 'file://D:/vue/Smartwatch-IOH-Monitoring-nuxtjs/node_modules/@unhead/shared/dist/index.mjs';
 
 function hasReqHeader(event, name, includes) {
   const value = getRequestHeader(event, name);
@@ -161,7 +160,7 @@ const errorHandler = (async function errorhandler(error, event) {
   return send(event, html);
 });
 
-const rootDir = "/home/project";
+const rootDir = "D:/vue/Smartwatch-IOH-Monitoring-nuxtjs";
 
 const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"}],"link":[],"style":[],"script":[],"noscript":[]};
 
@@ -180,7 +179,7 @@ const devReducers = {
   URL: (data) => data instanceof URL ? data.toString() : void 0
 };
 const asyncContext = getContext("nuxt-dev", { asyncContext: true, AsyncLocalStorage });
-const _5gU0qFpjn9 = (nitroApp) => {
+const _eQsmRhI2kM = (nitroApp) => {
   const handler = nitroApp.h3App.handler;
   nitroApp.h3App.handler = (event) => {
     return asyncContext.callAsync({ logs: [], event }, () => handler(event));
@@ -250,17 +249,17 @@ function onConsoleLog(callback) {
 }
 
 const plugins = [
-  _5gU0qFpjn9
+  _eQsmRhI2kM
 ];
 
-const _lazy_kdwqQN = () => Promise.resolve().then(function () { return renderer$1; });
+const _lazy_D11qfp = () => Promise.resolve().then(function () { return renderer$1; });
 
 const handlers = [
-  { route: '/__nuxt_error', handler: _lazy_kdwqQN, lazy: true, middleware: false, method: undefined },
-  { route: '/**', handler: _lazy_kdwqQN, lazy: true, middleware: false, method: undefined }
+  { route: '/__nuxt_error', handler: _lazy_D11qfp, lazy: true, middleware: false, method: undefined },
+  { route: '/**', handler: _lazy_D11qfp, lazy: true, middleware: false, method: undefined }
 ];
 
-const serverAssets = [{"baseName":"server","dir":"/home/project/server/assets"}];
+const serverAssets = [{"baseName":"server","dir":"D:/vue/Smartwatch-IOH-Monitoring-nuxtjs/server/assets"}];
 
 const assets = createStorage();
 
@@ -272,11 +271,11 @@ const storage = createStorage({});
 
 storage.mount('/assets', assets);
 
-storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/home/project","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/home/project/server","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/home/project/.nuxt","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/home/project/.nuxt/cache","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('data', unstorage_47drivers_47fs({"driver":"fs","base":"/home/project/.data/kv","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"D:\\vue\\Smartwatch-IOH-Monitoring-nuxtjs","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"D:\\vue\\Smartwatch-IOH-Monitoring-nuxtjs\\server","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"D:\\vue\\Smartwatch-IOH-Monitoring-nuxtjs\\.nuxt","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"D:\\vue\\Smartwatch-IOH-Monitoring-nuxtjs\\.nuxt\\cache","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('data', unstorage_47drivers_47fs({"driver":"fs","base":"D:\\vue\\Smartwatch-IOH-Monitoring-nuxtjs\\.data\\kv","ignore":["**/node_modules/**","**/.git/**"]}));
 
 function useStorage(base = "") {
   return base ? prefixStorage(storage, base) : storage;
@@ -733,11 +732,6 @@ new Proxy(/* @__PURE__ */ Object.create(null), {
   }
 });
 
-getContext("nitro-app", {
-  asyncContext: false,
-  AsyncLocalStorage: void 0
-});
-
 const config = useRuntimeConfig();
 const _routeRulesMatcher = toRouteMatcher(
   createRouter({ routes: config.nitro.routeRules })
@@ -1148,33 +1142,8 @@ function publicAssetsURL(...path) {
 
 globalThis.__buildAssetsURL = buildAssetsURL;
 globalThis.__publicAssetsURL = publicAssetsURL;
-const getClientManifest = () => import('file:///home/project/.nuxt/dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
-const getServerEntry = () => import('file:///home/project/.nuxt/dist/server/server.mjs').then((r) => r.default || r);
+const getClientManifest = () => import('file://D:/vue/Smartwatch-IOH-Monitoring-nuxtjs/.nuxt/dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
 const getSSRStyles = lazyCachedFunction(() => Promise.resolve().then(function () { return styles$1; }).then((r) => r.default || r));
-const getSSRRenderer = lazyCachedFunction(async () => {
-  const manifest = await getClientManifest();
-  if (!manifest) {
-    throw new Error("client.manifest is not available");
-  }
-  const createSSRApp = await getServerEntry();
-  if (!createSSRApp) {
-    throw new Error("Server bundle is not available");
-  }
-  const options = {
-    manifest,
-    renderToString: renderToString$1,
-    buildAssetsURL
-  };
-  const renderer = createRenderer(createSSRApp, options);
-  async function renderToString$1(input, context) {
-    const html = await renderToString(input, context);
-    if (process.env.NUXT_VITE_NODE_OPTIONS) {
-      renderer.rendererContext.updateManifest(await getClientManifest());
-    }
-    return APP_ROOT_OPEN_TAG + html + APP_ROOT_CLOSE_TAG;
-  }
-  return renderer;
-});
 const getSPARenderer = lazyCachedFunction(async () => {
   const manifest = await getClientManifest();
   const spaTemplate = await Promise.resolve().then(function () { return _virtual__spaTemplate; }).then((r) => r.template).catch(() => "").then((r) => {
@@ -1263,7 +1232,7 @@ const renderer = defineRenderHandler(async (event) => {
     url,
     event,
     runtimeConfig: useRuntimeConfig(event),
-    noSSR: event.context.nuxt?.noSSR || routeOptions.ssr === false && !isRenderingIsland || (false),
+    noSSR: true,
     head,
     error: !!ssrError,
     nuxt: void 0,
@@ -1273,7 +1242,7 @@ const renderer = defineRenderHandler(async (event) => {
     modules: /* @__PURE__ */ new Set(),
     islandContext
   };
-  const renderer = ssrContext.noSSR ? await getSPARenderer() : await getSSRRenderer();
+  const renderer = await getSPARenderer() ;
   const _rendered = await renderer.renderToString(ssrContext).catch(async (error) => {
     if (ssrContext._renderResponse && error.message === "skipping render") {
       return {};
@@ -1462,7 +1431,7 @@ function renderPayloadJsonScript(opts) {
     "type": "application/json",
     "innerHTML": contents,
     "data-nuxt-data": appId,
-    "data-ssr": !(opts.ssrContext.noSSR)
+    "data-ssr": false
   };
   {
     payload.id = "__NUXT_DATA__";

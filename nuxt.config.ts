@@ -1,9 +1,11 @@
-import { defineNuxtConfig } from 'nuxt/config'
+import { defineNuxtConfig } from 'nuxt/config';
 
 export default defineNuxtConfig({
   devtools: { enabled: false },
   modules: ['@nuxtjs/tailwindcss'],
   css: ['~/assets/css/main.css'],
+  ssr: false,
+
   vite: {
     server: {
       proxy: {
@@ -12,10 +14,16 @@ export default defineNuxtConfig({
           changeOrigin: true,
           rewrite: (path) => path.replace(/^\/api/, '/webhook/91d6a720-4d49-4ebe-bf19-e19e5aa9f748'),
           headers: {
-            'solarion': 'Renewable22'
-          }
-        }
-      }
-    }
-  }
-})
+            solarion: 'Renewable22',
+          },
+        },
+      },
+    },
+  },
+
+  devServer: {
+    host: '127.0.0.1',
+  },
+
+  compatibilityDate: '2025-02-13',
+});
