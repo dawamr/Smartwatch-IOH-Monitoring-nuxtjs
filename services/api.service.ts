@@ -1,15 +1,18 @@
 import axios from 'axios';
 import type { Device, HealthSummary, Health } from '~/types';
 
-const API_BASE_URL = 'http://localhost:3001/api';
+const API_BASE_URL =
+  process.env.NODE_ENV === 'production'
+    ? 'https://api.smartwatch.ioh.com/api' // URL Production
+    : 'http://localhost:3001/api'; // URL Local
 
 export const apiService = {
   async getDevices(): Promise<Device[]> {
-    const { data } = await useFetch('http://localhost:3001/api/devices');
+    const { data } = await useFetch(`${API_BASE_URL}/devices`);
     return data.value as Device[];
   },
   async getHealthSummary(deviceId: string, startDate: string, endDate: string): Promise<HealthSummary> {
-    const { data } = await useFetch(`http://localhost:3001/api/health/device/${deviceId}/summary`, {
+    const { data } = await useFetch(`${API_BASE_URL}/health/device/${deviceId}/summary`, {
       params: {
         start_date: startDate,
         end_date: endDate,
@@ -18,7 +21,7 @@ export const apiService = {
     return data.value as HealthSummary;
   },
   async getHealthByDevice(deviceId: string, startDate: string, endDate: string): Promise<Health[]> {
-    const { data } = await useFetch(`http://localhost:3001/api/health/device/${deviceId}`, {
+    const { data } = await useFetch(`${API_BASE_URL}/health/device/${deviceId}`, {
       params: {
         start_date: startDate,
         end_date: endDate,
