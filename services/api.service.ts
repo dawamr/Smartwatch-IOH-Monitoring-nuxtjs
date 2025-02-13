@@ -1,4 +1,3 @@
-import axios from 'axios';
 import type { Device, HealthSummary, Health } from '~/types';
 
 const API_BASE_URL =
