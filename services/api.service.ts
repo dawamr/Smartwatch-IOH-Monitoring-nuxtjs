@@ -2,7 +2,7 @@ import type { Device, HealthSummary, Health } from '~/types';
 
 const API_BASE_URL =
   process.env.NODE_ENV === 'production'
-    ? 'https://api.smartwatch.ioh.com/api' // URL Production
+    ? 'https://smartwatch-ioh-monitoring-backend-4nyu9cuww-dawamrs-projects.vercel.app/api' // URL Production
     : 'http://localhost:3001/api'; // URL Local
 
 export const apiService = {
