@@ -7,6 +7,7 @@ export const getDevices = async (req: Request, res: Response) => {
     const result = await pool.query('SELECT * FROM "Device" WHERE status = $1', ['published']);
     res.json(result.rows);
   } catch (error) {
+    console.log(error);
     res.status(500).json({ error: 'Kesalahan saat mengambil data device' });
   }
 };

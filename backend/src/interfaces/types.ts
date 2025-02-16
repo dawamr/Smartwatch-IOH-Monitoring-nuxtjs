@@ -40,6 +40,8 @@ export interface SleepReport {
   sleepQuality?: number;
   sleepTotalTime?: number;
   device_id?: string;
+  startDateUtc?: Date;
+  endDateUtc?: Date;
   // tambahkan field lain sesuai kebutuhan
 }
 
