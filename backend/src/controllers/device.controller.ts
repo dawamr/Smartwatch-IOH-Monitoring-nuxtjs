@@ -4,10 +4,23 @@ import { Device } from '../interfaces/types';
 
 export const getDevices = async (req: Request, res: Response) => {
   try {
-    const result = await pool.query('SELECT * FROM "Device" WHERE status = $1', ['published']);
-    res.json(result.rows);
+    let companyOwner;
+    try {
+      companyOwner = req.query.companyOwner || 'teretech';
+    } catch (parseError) {
+      companyOwner = 'teretech'; // fallback ke default jika parsing gagal
+    }
+    console.log(companyOwner);
+
+    let query = `SELECT * FROM "Device" WHERE status = 'published'`;
+
+    const result = await pool.query(query);
+    const filteredResult = result.rows.filter((device: Device) =>
+      device.companyOwner?.some((owner: string) => owner === companyOwner),
+    );
+    res.json(filteredResult);
   } catch (error) {
-    console.log(error);
+    console.error(error);
     res.status(500).json({ error: 'Kesalahan saat mengambil data device' });
   }
 };

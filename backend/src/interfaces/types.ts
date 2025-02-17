@@ -11,6 +11,7 @@ export interface Device {
   source_name?: string;
   cookies?: string;
   cookies_exp?: string;
+  companyOwner?: string[];
 }
 
 export interface Health {
