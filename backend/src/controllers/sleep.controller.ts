@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 import { pool } from '../index';
 import { SleepReport } from '../interfaces/types';
+import moment from 'moment';
 
 export const getSleepData = async (req: Request, res: Response) => {
   try {
@@ -15,22 +16,25 @@ export const getSleepByDeviceId = async (req: Request, res: Response) => {
   try {
     const { deviceId } = req.params;
     const { startDate, endDate } = req.query;
-    console.log(startDate, endDate);
 
-    let query = 'SELECT * FROM "SleepReport" WHERE device_id = $1';
+    // get day of week using moment
+    const date = moment(startDate as string).format('YYYY-MM-DD');
+    const dayOfMonth = parseInt(date.split('-')[2]);
+    const month = parseInt(date.split('-')[1]);
+    const year = parseInt(date.split('-')[0]);
+    console.log(startDate, dayOfMonth, month, year);
+
+    let query = 'SELECT * FROM "SleepReport" WHERE device_id = $1 AND type = 1';
     const queryParams: any[] = [deviceId];
 
-    if (startDate && endDate) {
-      query += ' AND "startDateUtc" >= $2 AND "endDateUtc" <= $3';
-      // convert to utc time
-      const startDateUtc = new Date(startDate as string);
-      const endDateUtc = new Date(endDate as string);
-      queryParams.push(startDateUtc, endDateUtc);
+    if (dayOfMonth && month) {
+      query += ' AND "recordDay" = $2 AND "recordMonth" = $3 AND "recordYear" = $4';
+      queryParams.push(dayOfMonth, month, year);
     }
 
-    query += ' ORDER BY "startDateUtc" ASC';
+    query += ' ORDER BY "type" ASC';
 
-    console.log(query);
+    console.log(query, queryParams);
     const result = await pool.query(query, queryParams);
     res.json(result.rows);
   } catch (error) {
